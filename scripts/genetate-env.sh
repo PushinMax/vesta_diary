@@ -5,8 +5,10 @@ ENV_FILE=".env"
 if [ ! -f "$ENV_FILE" ]; then
   cat > "$ENV_FILE" <<EOF
 # PostgreSQL
-DB_USER=postgres
-DB_PASSWORD=postgres
+dbname=postgres
+user=postgres
+password=postgres
+host=postgres
 
 EOF
   echo "Created .env file with generated secrets"

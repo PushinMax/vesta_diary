@@ -11,12 +11,6 @@ class RecordCreateResponse(BaseModel):
 class RecordReadResponse(BaseModel):
     content: str
 
-class RecordListItem(BaseModel):
-    id: UUID
-    name: str
-    created_at: datetime
-    marked: bool
-
 
 class RecordMarkResponse(BaseModel):
     flag: bool

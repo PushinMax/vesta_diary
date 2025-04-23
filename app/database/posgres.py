@@ -1,9 +1,10 @@
 import psycopg2
 import uuid
+import os
 
 class posgres:
     def __init__(self):
-        self.conn = psycopg2.connect(dbname='postgres', user='postgres', password='postgres', host='localhost')
+        self.conn = psycopg2.connect(dbname=os.getenv("dbname"), user=os.getenv("user"), password=os.getenv("password"), host=os.getenv("host"))
         curs = self.conn.cursor()
         curs.execute(
             'CREATE TABLE IF NOT EXISTS records( \
