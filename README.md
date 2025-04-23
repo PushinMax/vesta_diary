@@ -146,7 +146,7 @@ sh scripts/genetate-env.sh
 ```
 
 ### **Запуск**
-Сервер будет запущен нa 8080 порту
+Сервер будет запущен нa 8000     порту
 ```bash
 docker compose up -d --build
 ```
